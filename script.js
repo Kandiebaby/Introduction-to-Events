@@ -42,3 +42,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('You are too young.');
             }
         }
+
+         
+        const list = document.getElementById('itemList');
+
+        
+        list.addEventListener('click', function(event) {
+            if (event.target.tagName === 'LI') {
+                alert('You clicked: ' + event.target.textContent);
+                event.target.style.backgroundColor = '#d8bfd8'; m
+            }
+        });
