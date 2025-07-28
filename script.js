@@ -20,3 +20,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Input changed: ', this.value);
             });
 });
+
+
+  function handleFocus() {
+            document.getElementById('username').style.background = 'lightblue';
+        }
+    
+ function validateAge() {
+            var age = document.getElementById('ageInput');
+            var ageValue = parseInt(age.value, 10);
+
+            if (isNaN(ageValue)) {
+                age.style.backgroundColor = '#ffdab9';
+                console.log('Please enter a valid number')
+            
+            } else if (ageValue >= 18) {
+                age.style.backgroundColor = 'lightgreen'; 
+                console.log('You are an adult.');
+            } else {
+                age.style.backgroundColor = '#f4c5b9ff'; 
+                console.log('You are too young.');
+            }
+        }
