@@ -68,3 +68,16 @@ mouseButton.addEventListener("mouseover", () => {
 mouseButton.addEventListener("mouseout", () => {
     mouseMessage.textContent = "Hover over the button to see message.";
 });
+
+document.addEventListener('keydown', function(event) {
+            console.log(`Key pressed: ${event.key}`);
+            if (event.key === 'Escape') {
+                console.log('Escape key was pressed.');
+            }
+        });
+document.addEventListener('keyup', function(event) {
+            console.log(`Key released: ${event.key}`);
+            if (event.key === 'Enter') {
+                console.log('Last key pressed.');
+            }
+        });
