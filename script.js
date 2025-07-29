@@ -50,6 +50,21 @@ document.addEventListener('DOMContentLoaded', function() {
         list.addEventListener('click', function(event) {
             if (event.target.tagName === 'LI') {
                 alert('You clicked: ' + event.target.textContent);
-                event.target.style.backgroundColor = '#d8bfd8'; m
+                event.target.style.backgroundColor = '#d8bfd8'; 
             }
         });
+
+// Mouse Event Handling 
+
+const mouseButton = document.getElementById("mouseButton");
+const mouseMessage = document.getElementById("mouseMessage");
+
+
+mouseButton.addEventListener("mouseover", () => {
+  mouseMessage.textContent = "Button hovered.";
+
+});
+
+mouseButton.addEventListener("mouseout", () => {
+    mouseMessage.textContent = "Hover over the button to see message.";
+});
